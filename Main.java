@@ -30,9 +30,30 @@ class Main {
             sum= sum +  random.nextInt(101);
           }
           System.out.println("średnia to " + sum/10);
-         
+         break;
+
+        case 4:
+          Random random2=new Random();
+          int tablica[] = new int[10];
+          for(int i=0; i<10; i++){
+              tablica[i]=random2.nextInt(101);
+          }
+          int s;
+          for(int i=0; i<10; i++){
+            for(int l=0; l<9; l++){
+              if(tablica[l]>tablica[l+1]){
+                s=tablica[l+1];
+                tablica[l+1]=tablica[l];
+                tablica[l]=s;
+              }
+          }
+          }
+          
+          System.out.println("mediana 10 losowych liczb z zakresu od zera do 10 to: " + (tablica[4]+tablica[5])/2);
+    break;
+          
+      
+    
       }
-    
-    
   }
 }
